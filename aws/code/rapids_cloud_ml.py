@@ -79,7 +79,7 @@ class SageMakerML ( object ):
 
         # determine the available compute on the node
         self.n_workers = 0
-        self.cluster, self.client = self.initialize_compute()
+        self.cluster, self.client = self.initialize_compute(worker_limit=32)
 
     # -------------------------------------------------------------------------------------------------------------
     #  parse ML model parameters [ e.g., passed in by cloud HPO ]
