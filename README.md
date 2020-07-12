@@ -28,6 +28,4 @@ Forests and GPU-accelerated XGBoost modeling.
 1. Once the Notebook is created, select open JupyterLab.
 1. Open a terminal window:  git clone https://github.com/awshlabs/cloud-ml-examples
 
-## AWS SageMaker
-[Amazon SageMaker Step-by-step.](https://github.com/rapidsai/cloud-ml-examples/blob/master/aws/README.md "SageMaker Deployment Guide")
-
+ 
