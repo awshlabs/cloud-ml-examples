@@ -138,7 +138,7 @@ class SageMakerML ( object ):
     # -------------------------------------------------------------------------------------------------------------
     #  initialize compute cluster
     # -------------------------------------------------------------------------------------------------------------
-    def initialize_compute(self):
+    def initialize_compute(self, worker_limit=None):
         """ 
             xgboost has a known issue where training fails if any worker has no data partition
             so when initializing a dask cluster for xgboost we may need to limit the number of workers
@@ -159,7 +159,10 @@ class SageMakerML ( object ):
 
                 if 'XGBoost' in self.model_type:
                     self.n_workers = min( n_files, self.n_workers ) 
-                    
+
+                if worker_limit is not None:
+                    self.n_workers = min( worker_limit, self.n_workers )
+                                        
                 cluster = LocalCUDACluster( n_workers = self.n_workers )
                 client = Client( cluster )
                 print(f'dask multi-GPU cluster with {self.n_workers} workers ')
@@ -168,7 +171,10 @@ class SageMakerML ( object ):
                 self.n_workers = os.cpu_count()
 
                 if 'XGBoost' in self.model_type:
-                    self.n_workers = min( n_files, self.n_workers )                
+                    self.n_workers = min( n_files, self.n_workers )
+                    
+                if worker_limit is not None:
+                    self.n_workers = min( worker_limit, self.n_workers )
 
                 cluster = LocalCluster(  n_workers = self.n_workers,
                                          threads_per_worker = 1 )
