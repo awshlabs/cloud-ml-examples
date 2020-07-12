@@ -31,11 +31,11 @@ def new_job_name_from_config ( dataset_directory, code_choice,
 def recommend_instance_type ( code_choice, dataset_directory  ):
     recommended_instance_type = None
     
-    if 'CPU' in code_choice and dataset_directory in [ '1_year', '3_year' ]:
+    if 'CPU' in code_choice and dataset_directory in [ '1_year' ]:
         detail_str =  '16 cpu cores, 64GB memory'
         recommended_instance_type = 'ml.m5.4xlarge' 
 
-    elif 'CPU' in code_choice and dataset_directory in [ '10_year']:
+    elif 'CPU' in code_choice and dataset_directory in ['3_year', '10_year']:
         detail_str =  '96 cpu cores, 384GB memory'
         recommended_instance_type = 'ml.m5.24xlarge'
 
