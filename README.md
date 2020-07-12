@@ -1,4 +1,4 @@
-# <div align="left"><img src="img/rapids_logo.png" width="90px"/>&nbsp;RAPIDS & SageMaker Machine Learning Services Integration Lab</div>
+# <div align="left"> RAPIDS & SageMaker Machine Learning Services Integration Lab</div>
 
 RAPIDS is a suite of open-source libraries that bring GPU acceleration
 to data science pipelines. Users building cloud-based hyperparameter
