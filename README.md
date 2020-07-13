@@ -20,7 +20,7 @@ Forests and GPU-accelerated XGBoost modeling.
 
 ## Setting up SageMaker notebook
 
-1. Create a SageMaker Notebook Instance in us-east-1. (N. Virginia).
+1. Create a SageMaker Notebook Instance  (Not SageMaker Studio) in us-east-1. (N. Virginia).  
 1. Select ml.t3.2xlarge instance type.
 1. Under **Additional configuration**, Set volume size to be 50 GB.
 1. Create a new IAM role with Any S3 bucket access. 
