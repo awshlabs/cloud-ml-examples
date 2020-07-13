@@ -26,6 +26,8 @@ Forests and GPU-accelerated XGBoost modeling.
 1. Create a new IAM role with Any S3 bucket access. 
 1. Click on Create Notebook instance. 
 1. Once the Notebook is created, select open JupyterLab.
-1. Open a terminal window:  git clone https://github.com/awshlabs/cloud-ml-examples
+1. Open a terminal window: 
+
+cd SageMaker;  git clone https://github.com/awshlabs/cloud-ml-examples
 
  
