@@ -112,7 +112,7 @@ class SageMakerML ( object ):
 
             if 'GPU' in self.compute_type:
                 model_params.update( { 'tree_method': 'gpu_hist' })
-                model_params.update( { 'single_precision_histogram': True})
+                model_params.update( { 'single_precision_histogram': False})
             else:
                 model_params.update( { 'tree_method': 'hist' })
 
